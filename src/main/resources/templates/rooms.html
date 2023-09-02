@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms Application</title>
+</head>
+<body>
+ <h1>List of Rooms</h1>
+ <table>
+   <thead>
+   <tr>
+     <th scope="col">Room Id</th>
+     <th scope="col">Room Name</th>
+     <th scope="col">Room Number</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr th:each="room: ${rooms}">
+       <td th:text="${room.id}">123</td>
+       <td th:text="${room.name}">Nirvana</td>
+       <td th:text="${room.roomNumber}">P21</td>
+       <td th:text="${room.bedInfo}">2D</td>
+   </tr>
+   </tbody>
+ </table>
+</body>
+</html>
